@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html> 
+
+<head>
+	<title>core object(Date object)</title>
+</head> 
+
+<body>
+
+	<script> // Date 객체	
+		var today = new Date();  // Date()객체 생성  
+    	document.write("현재 시간 : " + today.toLocaleString() + "<br>");
+    </script> 
+
+    <script> // String 객체
+		var city = ["seoul", "busan", "jeju"]
+		var week = new Array(7); week[0]="월"; week[1]="화"; .., week[6]="일";
+		var color= new Array(); color[0]="red"; color[1]="blue"; color[2]="green";
+	
+		var cm = city.length; // 3
+		var c = city.concat(color); // seoul, busan, jeju, red, blue, green
+		var d = city.join("시") // seoul시, busan시, jeju시
+		var e = city.reverse(); // jeju, busan, seoul
+		var f = a.slice	
+	</script>
+
+	<script> // Math객체
+		var sq = Math.sqrt(4); // 제곱근 sq=2
+		var area = Math.PI*2*2
+		var m = Math.random()
+	</script>
+
+	<script> //object로 새 객체 만들기
+		var account = new Object();
+		account.owner = "곽찬"
+		account.code = "043901-54545-5643535"
+		account.balance = "2000000"
+	</script>
+
+	<script> // 리터럴 표기법으로 새 객체 만들기
+	
+		var account = {
+		 owner : "황기태", // 계좌 주인 프로퍼티 추가 
+		 code : "111", // 계좌 코드 프로퍼티 추가 
+		 balance : 35000, // 잔액 프로퍼티 추가
+		
+		inquiry : function () { return this.balance; }, // 잔금 조회 
+		deposit : function(money) { this.balance += money; }, // 저금. 
+		withdraw : function (money) { this.balance -= money; return money;} // 예금 인출 
+		};
+	</script>
+	
+
+	<script> //프로퍼타입(생성자객체)으로 새 객체 만들기
+		function Student(name, score) { 
+		 this.univ = "한국대학"; 
+		 this.name = name; 
+		 this.score = score; 
+		}
+	</script>
+
+</body> 
+
+</html>
+
