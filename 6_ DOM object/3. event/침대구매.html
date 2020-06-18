@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>선택된 물품 계산하기</title>
+	
+	<script>
+	var sum=0;
+	function calc(cBox) {
+		if(cBox.checked)
+			sum += parseInt(cBox.value);
+		else
+			sum -= parseInt(cBox.value);
+		document.getElementById("sumtext").value = sum;
+	}
+	</script>
+</head>
+
+<body>
+	<h3>물품을 선택하면 금액이 자동 계산됩니다</h3>	 <hr>
+	<form>
+		침대틀 색깔(필수): <br>
+		<select id="bed">
+				<option value=white>하얀색 침대틀
+				<option value=black>검정색 침대틀
+		</select> 
+		<br><br>
+
+		옵션사항: <br>
+		<input type="checkbox" name="매트리스" value="70000" onclick="calc(this)">침대 매트리스(+70,000)
+		<input type="checkbox" name="책상" value="55000" onclick="calc(this)">인테리어 책상(+55,000) 
+		<input type="checkbox" name="계단" value="15000" onclick="calc(this)">서랍식 계단(+15,000)<br>
+		지불하실 금액 <input type="text" id="sumtext" value="0" >
+	</form>
+</body>
+
+</html>

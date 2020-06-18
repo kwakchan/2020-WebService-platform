@@ -1,0 +1,33 @@
+BOM(Browser Object Model) 객체
+: html페이지와 별개이며 브라우저를 제어하기 위한 객체
+-브라우저마다 BOM객체의 프로퍼티와 메소드들이 다르다
+
+(1)브라우저 공통 BOM 객체
+
+1)window
+-window.open(시작할 url주소, 시작할 윈도우 이름(생략가능), 윈도우 모양크기(생략가능))
+window.open("http://www.naver.com", "myWin", "left=10,top=10,width=300,height=400");
+
+-window객체.close
+
+-window setTimeout() 코드 1번 호출
+-windwo setInterval() 코드 반복
+
+-윈도우 위치 조정 & 크기 조절
+-윈도우 스크롤 
+
+-window print
+(onbeforeprint: 회사 로그 이미지를 보이도록 CSS3 스타일 설정  
+onafterprintt: 회사 로그 이미지를 보이지 않도록 CSS3 스타일 설정
+
+
+2)navigator: 윈도우에 로드된 웹 페이지의 URL 정보를 나타내는 객체
+
+3)history
+-length
+-back
+-forward
+-go(n)
+
+4)screen
+
